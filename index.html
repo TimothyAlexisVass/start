@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Start Page</title>
+  <style>
+    :root {
+      color-scheme: dark;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #0f1115;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .grid {
+      width: min(92vw, 1100px);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+      gap: 2vw;
+    }
+
+    .tile {
+      width: 20vw;
+      height: 20vw;
+      max-width: 220px;
+      max-height: 220px;
+      min-width: 120px;
+      min-height: 120px;
+      display: grid;
+      place-items: center;
+      background: #1a1f29;
+      border: 1px solid #2a3140;
+      border-radius: 2rem;
+      text-decoration: none;
+      transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+    }
+
+    .tile:hover,
+    .tile:focus-visible {
+      transform: translateY(-4px);
+      background: #222938;
+      border-color: #4b5a78;
+      outline: none;
+    }
+
+    .tile svg {
+      width: 52%;
+      height: 52%;
+      fill: #f5f7fb;
+    }
+
+    @media (min-width: 900px) {
+      .grid {
+        max-width: calc((20vw * 4) + (2vw * 3));
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="grid" aria-label="Start page links">
+    <a class="tile" href="https://www.youtube.com" aria-label="YouTube">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8ZM9.6 15.7V8.3L16 12l-6.4 3.7Z"/>
+      </svg>
+    </a>
+
+    <a class="tile" href="https://mail.zoho.eu/zm/#mail/folder/inbox" aria-label="Zoho Mail">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2 .4v.2l8 5.7 8-5.7v-.2a.5.5 0 0 0-.5-.5h-15a.5.5 0 0 0-.5.5Zm16 2.6-7.4 5.2a1 1 0 0 1-1.2 0L4 8.5v10a.5.5 0 0 0 .5.5h15a.5.5 0 0 0 .5-.5v-10Z"/>
+      </svg>
+    </a>
+
+    <a class="tile" href="https://github.com/thousandbrainsproject/tbp.monty/pulls/TimothyAlexisVass" aria-label="Thousand Brains Project pull requests">
+      <img src="https://github.com/thousandbrainsproject.png" alt="" style="width:60%;height:60%;object-fit:contain;border-radius:12px;" />
+    </a>
+
+    <a class="tile" href="https://github.com/bredband2/crm_app/pulls?q=is%3Apr+is%3Aopen+-is%3Adraft+no%3Aassignee" aria-label="GitHub CRM app pull requests">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.4 3.6 1.1.1-.8.4-1.4.8-1.8-2.7-.3-5.5-1.4-5.5-6A4.7 4.7 0 0 1 6.5 8c-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2A11.4 11.4 0 0 1 12 5.8c.7 0 1.4.1 2.1.3 2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1a4.7 4.7 0 0 1 1.2 3.2c0 4.6-2.8 5.7-5.5 6 .5.4.9 1.2.9 2.4v3.6c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/>
+      </svg>
+    </a>
+  </main>
+</body>
+</html>
